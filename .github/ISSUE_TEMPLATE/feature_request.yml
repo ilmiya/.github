@@ -1,0 +1,69 @@
+name: Feature Request
+description: Suggest a user-facing capability for consideration
+title: "[Feature]: "
+labels: ["enhancement"]
+assignees: []
+
+body:
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User Story
+      description: "Who is this for? What do they want? Why does it matter?"
+      placeholder: "As a [user type], I want to [action], so that [outcome]"
+    validations:
+      required: true
+
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: Success Criteria
+      description: "Define measurable success and expected outcome. Include rollout considerations if relevant."
+      placeholder: |
+        - [ ] Feature is enabled behind a flag for early adopters
+        - [ ] End-user can complete the new flow with no errors
+        - [ ] Key metric improves by X% post-launch
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation-notes
+    attributes:
+      label: Implementation Context
+      description: "Add technical considerations, blockers, or dependencies (services, APIs, systems)."
+      placeholder: |
+        - Requires update to onboarding API
+        - Depends on shared component in design system
+        - Blocked by ongoing authentication work
+    validations:
+      required: false
+
+  - type: textarea
+    id: delivery-readiness
+    attributes:
+      label: Delivery & Validation Plan
+      description: "How will this be developed, tested, and validated before release?"
+      placeholder: |
+        - [ ] Unit and integration tests added
+        - [ ] QA checklist defined
+        - [ ] Analytics/tracking events instrumented
+    validations:
+      required: false
+
+  - type: input
+    id: design-link
+    attributes:
+      label: Design / Docs
+      description: "Optional link to Figma, Notion, or any related design/requirements document."
+      placeholder: "https://figma.com/file/..."
+    validations:
+      required: false
+      
+  - type: markdown
+    attributes:
+      value: |
+        **Reminder:** Use `feat:` in pull request titles and commits  
+        >
+        > Example: `feat: add autosave to assignment drafts`  
+        > 
+        > This helps automate release notes and version bumps (e.g., `v1.2.0` → `v1.3.0`). 

@@ -1,0 +1,115 @@
+name: Bug Report
+description: Report a reproducible issue to help us improve the product
+title: "[Bug]: "
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Bug Summary
+
+        Provide a concise description of the issue, including its impact and any relevant context.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: "Summarize the problem and its impact."
+      placeholder: "Example: The 'Submit' button on the checkout page is unresponsive in Chrome."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: "List the steps to consistently reproduce the issue."
+      placeholder: |
+        1. Navigate to the checkout page.
+        2. Fill in all required fields.
+        3. Click the 'Submit' button.
+        4. Observe that nothing happens.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: "Describe what you expected to happen."
+      placeholder: "Example: Clicking 'Submit' should process the payment and display a confirmation page."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: "Describe what actually happened."
+      placeholder: "Example: Clicking 'Submit' does not respond, and the user remains on the checkout page."
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Details
+      description: "Provide details about the environment where the issue occurred."
+      placeholder: |
+        - OS: Windows 11
+        - Browser: Chrome 120.0.6099.129
+        - Device: Desktop
+        - Application Version: v2.3.4
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity Level
+      description: "Indicate the severity of the issue."
+      options:
+        - Critical – Blocks core functionality or causes data loss
+        - High – Major issue affecting significant functionality
+        - Medium – Minor issue with limited impact
+        - Low – Cosmetic issue or minor inconvenience
+    validations:
+      required: true
+
+  - type: textarea
+    id: visual-evidence
+    attributes:
+      label: Visual Evidence
+      description: "Attach screenshots or videos that illustrate the issue."
+      placeholder: "You can drag and drop images or videos here."
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs and Console Output
+      description: "Include any relevant logs or console output."
+      placeholder: "Paste error messages or logs here."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: "Provide any other information that might help in resolving the issue."
+      placeholder: "Example: Occurs only when user is logged in as admin."
+    validations:
+      required: false
+      
+  - type: markdown
+    attributes:
+      value: |
+        **Reminder:** Use `fix:` in pull request titles and commits  
+        >
+        > Example: `fix: correct validation bug on login form`  
+        > 
+        > This helps automate patch releases (e.g., `v1.2.4` → `v1.2.5`) and maintain accurate changelogs.

@@ -1,0 +1,35 @@
+name: Post Mortem
+description: Document and analyze an incident or outage
+title: "[Post Mortem]: "
+labels: ["post-mortem"]
+
+body:
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: "Select how urgent or impactful this request is."
+      options:
+        - P0 – Mission Critical (Drop everything for this)
+        - P1 – High Priority (Next up, push fast)
+        - P2 – Normal Cadence (Keep it on track)
+        - P3 – No Urgency (Get to it when possible)
+    validations:
+      required: true
+
+  - type: textarea
+    id: incident
+    attributes:
+      label: Incident
+      placeholder: "Summarize the incident or outage, including impact on users or systems."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: "Explain the root cause, contributing factors, or any relevant context."
+      placeholder: "Detail what led to the incident and why it mattered."
+    validations:
+      required: true

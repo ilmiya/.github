@@ -1,0 +1,40 @@
+name: Support Request
+description: Submit a request for help, guidance, or troubleshooting
+title: "[Support Request]: "
+labels: ["support"]
+
+body:
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: "Select how urgent or impactful this request is."
+      options:
+        - P0 – Mission Critical (Drop everything for this)
+        - P1 – High Priority (Next up, push fast)
+        - P2 – Normal Cadence (Keep it on track)
+        - P3 – No Urgency (Get to it when possible)
+    validations:
+      required: true
+
+  - type: textarea
+    id: request
+    attributes:
+      label: Request
+      placeholder: "Clearly state what you need help with, access you require, or guidance you are seeking."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: "Provide relevant details to help assess and fulfill the request efficiently."
+      placeholder: |
+        Example:
+        - Purpose of the request or desired outcome  
+        - Steps already taken to resolve or obtain access  
+        - System, version, or environment details  
+        - Any supporting information like screenshots or logs
+    validations:
+      required: true
